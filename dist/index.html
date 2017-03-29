@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="/d262cf07.favicon.ico">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="stylesheet" href="styles/3b4f729e.vendor.css">
-    <link rel="stylesheet" href="styles/08bab61b.main.css">
+    <link rel="stylesheet" href="styles/bb276e4a.main.css">
     <script src="scripts/vendor/d41d8cd9.modernizr.js"></script>
     <!-- <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'> -->
     <!-- <link href='http://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'> -->
@@ -19,7 +19,7 @@
 
 <body>
 
-<div id="map_search">
+<div id="map_search" style="opacity: 0;">
 <h3>Select a country and a date range for your search</h3>
 
 <div id="map_search_dropdown_container">
@@ -41,9 +41,10 @@
 </td><td>
 <img src="images/loader.gif" height="16px"/>
 </td></tr></table>
+<div id="map_search_years">0000 - 0000</div>
 <table id="map_search_results_table"><tr>
-<td>Fonds:</td><td id="map_search_results_fonds">X,XXX</td></tr>
-<td>Files:</td><td id="map_search_results_files">X,XXX</td></tr>
+<td class="map_search_results_table_label">Fonds:</td><td id="map_search_results_fonds">X,XXX</td></tr>
+<td class="map_search_results_table_label">Files:</td><td id="map_search_results_files">X,XXX</td></tr>
 </table>
 </div>
 
@@ -68,7 +69,7 @@
 
 <script src="scripts/1df9868e.vendor.js"></script>
 
-<script src="scripts/54b32aa8.main.js"></script>
+<script src="scripts/124c44d1.main.js"></script>
 
 </body>
 </html>

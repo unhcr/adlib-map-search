@@ -1,13 +1,15 @@
 body {
   padding: 10px;
       font-family: sans-serif;
+      margin: 0 auto;
 }
 
 #map_search {
     font-family: sans-serif;
-    max-width: 1000px;
+    max-width: 1100px;
     position: relative;
     margin-top: 0px;
+    margin: 0 auto;
   }
 
   #map_search_dropdown_container{
@@ -32,12 +34,21 @@ body {
 
 }
 
+#map_search #mapsvg {
+  border-bottom: 1px solid #f3f3f3;
+}
+
+#map_search .select2-container {
+  margin-left: 1px;
+}
+
 #map_search_dropdown_container {
   position: absolute;
   top: 0px;
   right: 5px;
-  width: 250px;
+  min-width: 220px;
   height: 25px;
+  margin-left: 5px;
 }
 
 #map_search .yearInput {
@@ -87,14 +98,16 @@ body {
 #map_search_message { 
   font-size: 12px;
   font-weight: bold;
+    margin: 0 auto;
+
   margin-top: 10px;
-  background-color: #2f5c7d;
+  background-color: #9cabb7;
     color: #FFF;
     display: inline;
     padding: 3px 7px;
     border-radius: 3px;
     display: none;
-
+    max-width: 1100px;
 }
     
 #map_search .tabLabel {
@@ -125,6 +138,13 @@ body {
    display: none;
  }
 
+  #map_search_years {
+  padding-left: 2px; 
+  // font-weight: bold;
+  font-size: 10px;
+  color: grey;
+  }
+
   #map_search svg { display: block !important; }
 
   #map_search_results {
@@ -136,7 +156,7 @@ body {
     width: auto;
     position: absolute;
     bottom: 110px;
-    left: 5px;
+    left: 10px;
     font-size: 10px;
     color: #565656;
     background-color: rgba(255,255,255,0.7);
@@ -159,6 +179,10 @@ body {
     color: #565656;
     vertical-align: middle;
   }
+
+  .map_search_results_table_label {
+    padding-top: 3px;
+  }
   #map_search_results table {
     margin-top: 2px;
   }
@@ -178,9 +202,7 @@ body {
   /* some CSS here */
 
   #map_search_results {
-    width: 100%;
-    max-width: 227px;
-    margin-top: 5px;
+    display: block;
     position: static;
   }
 
@@ -201,12 +223,14 @@ body {
 
  #map_search_year_input {
    display: block;
-   margin-top: 15px;
    max-width: 247px;
+   margin: 0 auto;
+   margin-top: 15px;
+
  }
   #map_search_buttons {
     padding-top: 10px;
-    margin: 0px;
+    margin: 0 auto;
   }
 
 }
