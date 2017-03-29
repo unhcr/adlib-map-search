@@ -14,7 +14,7 @@ Project initiated by Alwyn Greer. Map search component developed by Matthew Smaw
 `grunt serve` - Runs a local server and opens the browser automatically. 
 
 ### Build into a distributable
-`grunt build` - Builds the application into the dist folder (minifies and merges assets). 
+`grunt build` - This builds the application into the dist folder. See gruntfile.js for more details on the tasks and configuation. (minifies and merges assets). 
 
 
 ## Application Structure
@@ -22,18 +22,18 @@ Project initiated by Alwyn Greer. Map search component developed by Matthew Smaw
 The application was developed using a Yeoman webapp scaffold. It uses grunt as a local websever and to run tasks including minifiyng and merging assets on build. 
 
 
-**app/** - development folder.
+**app/** - this is the main development folder. this is where you should work. 
 
-**app/index.html** - main html page.
+**app/index.html** - main index html page
 
-**app/scripts/main.js** - application javascript file.
-
-
-**bower_components/*** - external assets installed through bower, e.g. d3.js
+**app/scripts/main.js** - this contains the main application javascript code for the map and slider.
 
 
+**bower_components/*** - external assets installed through bower, e.g. d3.js. see below for details. 
 
-**dist/** - distribution folder 
+
+
+**dist/** - distribution folder. this is where all the minified and merged js and css files are placed after the `grunt build` task is executed on the terminal. 
 
 
 
