@@ -174,7 +174,7 @@ $(document).ready(function() {
 	var x = d3.scale.linear()
 	    .domain([minYear, maxYear])
 	    .nice(d3.time.year)
-	    .range([0, viewboxWidth-40]);
+	    .range([0, viewboxWidth-45]);
 
 	var chartsvg = d3.select('#chartsvg');
 
@@ -183,7 +183,7 @@ $(document).ready(function() {
 	.attr('width', function(){ return x(rightYear)-x(leftYear)})
 	.attr('y', 11)
 	.attr('height', 50)
-	.attr('transform', 'translate(20,0)')
+	.attr('transform', 'translate(20,5)')
 	.style('fill', 'transparent')
 	.style('stroke', '#919090');
 
@@ -192,13 +192,13 @@ $(document).ready(function() {
 	.attr('width', function(){ return x(rightYear)-x(leftYear)})
 	.attr('y', 12)
 	.attr('height', 48)
-	.attr('transform', 'translate(20,0)')
+	.attr('transform', 'translate(20,5)')
 	.style('fill', '#D6DCEB')
 	.style('stroke', 'transparent');
 
 	chartsvg.append("g")
 	    .attr("class", "x axis")
-	    .attr('transform', 'translate(20,60)')
+	    .attr('transform', 'translate(20,65)')
 	    .call(d3.svg.axis().scale(x).orient("bottom")
 	    	.ticks(10)
 	    	.tickSubdivide(1)
@@ -206,7 +206,7 @@ $(document).ready(function() {
 	    	.tickSize(-50, 20, 0));
 
 	d3.selectAll('.tick text')
-	        .attr('transform', 'translate(18,-47)');
+	        .attr('transform', 'translate(20,-47)');
 
 	var brushLeft = d3.svg.brush()
 	.x(x)
@@ -232,7 +232,7 @@ $(document).ready(function() {
 	    
 	var leftTabGrp = leftTab.append('g')
 		.attr('id', 'leftTabGrp')
-		.attr('transform', 'translate(12,20)')
+		.attr('transform', 'translate(12,25)')
 		.style('cursor', 'pointer').on('mouseover', function(){
 			d3.select('#leftTabBg').style('fill', '#CAC9CB');
 		}).on('mouseout', function(){
@@ -241,8 +241,8 @@ $(document).ready(function() {
 
 	var leftTabLabel = leftTabGrp.append('text')
 		.attr('class', 'tabLabel')
-		.attr('x', -11)
-		.attr('y', -12)
+		.attr('x', -14)
+		.attr('y', -14)
 		.text(minYear)
 
 	leftTabGrp.append('rect')
@@ -275,7 +275,7 @@ $(document).ready(function() {
 	    .call(brushRight);
 
 	var rightTabGrp = rightTab.append('g')
-	    .attr('transform', function(){ return 'translate('+(x(maxYear)-x(minYear)+11)+',20)'}) 
+	    .attr('transform', function(){ return 'translate('+(x(maxYear)-x(minYear)+11)+',25)'}) 
 	    .style('cursor', 'pointer').on('mouseover', function(){
 			d3.select('#rightTabBg').style('fill', '#CAC9CB');
 		}).on('mouseout', function(){
@@ -284,8 +284,8 @@ $(document).ready(function() {
 
 	var rightTabLabel = rightTabGrp.append('text')
 		.attr('class', 'tabLabel')
-		.attr('x', 3)
-		.attr('y', -12)
+		.attr('x', 4)
+		.attr('y', -14)
 		.text(maxYear)
 
 	rightTabGrp.append('rect')
@@ -317,7 +317,7 @@ $(document).ready(function() {
 		value = Math.round(value);
 		if(value>=rightYear) value = rightYear - 1;
 		if(value<=minYear) value = minYear;
-		leftTabGrp.attr('transform', function(){ return 'translate('+(x(value)+12)+',20)'});			
+		leftTabGrp.attr('transform', function(){ return 'translate('+(x(value)+12)+',25)'});			
 		leftYear = value;
 		chartBg.attr('x', function(){ return x(leftYear); })
 		.attr('width', function(){ return x(rightYear)-x(leftYear)});
@@ -330,7 +330,7 @@ $(document).ready(function() {
 		value = Math.round(value);
 		if(value<=leftYear) value = leftYear + 1;
 		if(value>=maxYear) value = maxYear;
-		rightTabGrp.attr('transform', function(){ return 'translate('+(x(value)+11)+',20)'});	
+		rightTabGrp.attr('transform', function(){ return 'translate('+(x(value)+11)+',25)'});	
 		rightYear = value;
 		chartBg.attr('x', function(){ return x(leftYear); })
 		.attr('width', function(){ return x(rightYear)-x(leftYear)});
