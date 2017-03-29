@@ -1,0 +1,11 @@
+{
+  "name": "viz3",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.8.2",
+    "d3": "~3.5.3",
+    "jquery": "~2.1.4",
+    "select2": "^4.0.3",
+    "svg-pan-zoom": "^3.4.1"
+  }
+}
