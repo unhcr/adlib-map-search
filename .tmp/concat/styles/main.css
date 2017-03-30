@@ -151,8 +151,7 @@ body {
 #map_search_results table {
   margin-top: 2px; }
 
-#map_search_results_files,
-#map_search_results_fonds {
+#map_search_results_hits {
   color: #006AB4 !important;
   font-weight: bold;
   text-align: right;

@@ -12,10 +12,6 @@ body {
     margin: 0 auto;
   }
 
-  #map_search_dropdown_container{
-
-}
-
 .select2,
 .select2-results__option {
   font-family: sans-serif;
@@ -162,12 +158,6 @@ body {
     background-color: rgba(255,255,255,0.7);
   }
 
-  #map_search_results img {
-  // position: relative; 
-  // top: 15px;
-  // left: 15px;
-  }
-
   #map_search_results_name {
     font-weight: bold;
     font-size: 14px;
@@ -187,8 +177,7 @@ body {
     margin-top: 2px;
   }
 
-  #map_search_results_files,
-  #map_search_results_fonds {
+  #map_search_results_hits {
     color: #006AB4 !important;
     font-weight: bold;
     text-align: right;

@@ -27,7 +27,6 @@ $(document).ready(function() {
 		$('#chartsvg').height($('#mapsvg').width()/22);
 	}
 
-
 	//**************************
 	// svg map zoom and pan
 	//**************************
@@ -100,7 +99,6 @@ $(document).ready(function() {
 		});
 	});
 
-
 	d3.selectAll('.country')
 	.style('cursor', 'pointer')
 	.style('fill-opacity', function(){ 
@@ -127,7 +125,6 @@ $(document).ready(function() {
 			} else {
 				return 'rgb(210, 208, 206)';
 			}
-
 		});
 	}).on('mouseout', function(d,i){
 		hoverTooltip.style('display','none');
@@ -206,7 +203,7 @@ $(document).ready(function() {
 	    	.tickSize(-50, 20, 0));
 
 	d3.selectAll('.tick text')
-	        .attr('transform', 'translate(20,-47)');
+	    .attr('transform', 'translate(20,-47)');
 
 	var brushLeft = d3.svg.brush()
 	.x(x)
@@ -312,7 +309,6 @@ $(document).ready(function() {
 	    .style('stroke', '#919090');
 
 	function brushLeft(){
-
 		value = x.invert(d3.mouse(this)[0]-18);
 		value = Math.round(value);
 		if(value>=rightYear) value = rightYear - 1;
@@ -382,9 +378,7 @@ $(document).ready(function() {
 		selectCountry('');	
 		window.zoomMap.reset();		
 	});
-
 	$('#map_search').css('opacity', 1);
-
 });
 
 function getResults(){
@@ -399,8 +393,7 @@ function getResults(){
 	$('#map_search_results_table').css('opacity', 0);
 
 	// set number of files found (random)
-	$('#map_search_results_files').text(addCommas(Math.floor(Math.random() * 10000) + 1));  
-	$('#map_search_results_fonds').text(addCommas(Math.floor(Math.random() * 10000) + 1));  
+	$('#map_search_results_hits').text(addCommas(Math.floor(Math.random() * 10000) + 1));  
 
 	$('#map_search_years').text(leftYear+' - '+rightYear);
 	// on complete, show results and hide spinner
