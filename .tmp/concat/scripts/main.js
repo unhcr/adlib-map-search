@@ -145,7 +145,7 @@ $(document).ready(function() {
 	   return d3.ascending(x.name, y.name);
 	});
 
-	d3.select('#map_search_dropdown').selectAll('option').data(countryArray).enter().append('option')
+	d3.select('#map_search_dropdown').selectAll('.map_search_option').data(countryArray).enter().append('option')
 	.attr('value', function(d,i){
 		return d.id;
 	})
